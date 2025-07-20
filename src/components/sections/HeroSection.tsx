@@ -36,50 +36,60 @@ export const HeroSection = () => {
   return (
     <section id="home" className="min-h-screen flex items-center section-padding pt-32">
       <div className="container-width">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
-          {/* Left Column - "Data" */}
-          <div className="text-left order-2 lg:order-1">
-            <h2 className="text-6xl md:text-8xl font-bold tracking-widest gradient-text">
-              DATA
-            </h2>
+        <div className="relative">
+          {/* Top Name - Center */}
+          <div className="text-center mb-8">
+            <h1 className="text-2xl md:text-3xl font-bold tracking-widest uppercase text-foreground/90">
+              P.V. DINESH
+            </h1>
           </div>
 
-          {/* Center Column - Profile and Info */}
-          <div className="text-center order-1 lg:order-2 space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-2xl md:text-3xl font-bold tracking-widest uppercase">
-                P.V. DINESH
-              </h1>
-              <p className="text-foreground/80 max-w-md mx-auto leading-relaxed">
+          {/* Main Content Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center min-h-[600px]">
+            {/* Left Column - "DATA" */}
+            <div className="flex items-center justify-center lg:justify-end">
+              <h2 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-wider gradient-text">
+                DATA
+              </h2>
+            </div>
+
+            {/* Center Column - Profile Card */}
+            <div className="flex flex-col items-center space-y-6">
+              {/* Flip Card Avatar */}
+              <FlipCard
+                ref={heroAvatarRef}
+                frontImage={dineshProfile}
+                backImage={skillsClipart}
+                alt="P.V. Dinesh"
+                className="w-64 h-80 md:w-72 md:h-96 lg:w-80 lg:h-96"
+              />
+
+              {/* Waving Hand Button */}
+              <Button
+                variant="glass"
+                size="icon"
+                className="w-16 h-16 rounded-full text-2xl hover-glow animate-float bg-primary/20"
+              >
+                👋
+              </Button>
+            </div>
+
+            {/* Right Column - "ANALYST" */}
+            <div className="flex items-center justify-center lg:justify-start">
+              <h2 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-wider gradient-text">
+                ANALYST
+              </h2>
+            </div>
+          </div>
+
+          {/* Bottom Description - Right Aligned */}
+          <div className="mt-8 lg:mt-12 flex justify-center lg:justify-end">
+            <div className="max-w-md text-center lg:text-right">
+              <p className="text-foreground/80 text-lg leading-relaxed">
                 I'm a curious and analytical B-Tech student specializing in 
                 Electronics and Communication Engineering.
               </p>
             </div>
-
-            {/* Flip Card Avatar */}
-            <FlipCard
-              ref={heroAvatarRef}
-              frontImage={dineshProfile}
-              backImage={skillsClipart}
-              alt="P.V. Dinesh"
-              className="w-64 h-64 md:w-80 md:h-80"
-            />
-
-            {/* Waving Hand Button */}
-            <Button
-              variant="glass"
-              size="icon"
-              className="w-16 h-16 rounded-full text-2xl hover-glow animate-float"
-            >
-              👋
-            </Button>
-          </div>
-
-          {/* Right Column - "Analyst" */}
-          <div className="text-right order-3">
-            <h2 className="text-6xl md:text-8xl font-bold tracking-widest gradient-text">
-              ANALYST
-            </h2>
           </div>
         </div>
       </div>
