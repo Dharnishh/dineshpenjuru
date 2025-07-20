@@ -33,7 +33,7 @@ export const HeroSection = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center min-h-[600px]">
             {/* Left Column - "DATA" and Name */}
             <div className="flex flex-col items-center lg:items-end justify-center space-y-4">
-              <h2 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-wider gradient-text">Dinesh</h2>
+              <h2 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-wider gradient-text">DINESH</h2>
               <h1 className="text-2xl tracking-widest uppercase text-foreground/90 font-medium md:text-5xl">PENJURU</h1>
             </div>
 
