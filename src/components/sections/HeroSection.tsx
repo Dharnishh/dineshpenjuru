@@ -37,20 +37,16 @@ export const HeroSection = () => {
     <section id="home" className="min-h-screen flex items-center section-padding pt-32">
       <div className="container-width">
         <div className="relative">
-          {/* Top Name - Center */}
-          <div className="text-center mb-8">
-            <h1 className="text-2xl md:text-3xl font-bold tracking-widest uppercase text-foreground/90">
-              P.V. DINESH
-            </h1>
-          </div>
-
           {/* Main Content Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center min-h-[600px]">
-            {/* Left Column - "DATA" */}
-            <div className="flex items-center justify-center lg:justify-end">
+            {/* Left Column - "DATA" and Name */}
+            <div className="flex flex-col items-center lg:items-end justify-center space-y-4">
               <h2 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-wider gradient-text">
                 DATA
               </h2>
+              <h1 className="text-2xl md:text-3xl font-bold tracking-widest uppercase text-foreground/90">
+                P.V. DINESH
+              </h1>
             </div>
 
             {/* Center Column - Profile Card */}
