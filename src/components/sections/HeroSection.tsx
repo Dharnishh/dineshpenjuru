@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import { FlipCard, FlipCardRef } from "@/components/FlipCard";
 import { Button } from "@/components/ui/button";
-import dineshProfile from "@/assets/dinesh-profile.jpg";
+import dineshProfile from "/lovable-uploads/edbf57cc-59e4-4b54-ae2c-8c41861472ed.png";
 import skillsClipart from "@/assets/skills-clipart.png";
 
 export const HeroSection = () => {

@@ -2,46 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Portfolio Design System - Purple Gradient Theme */
+/* Portfolio Design System - Clean White Theme */
 
 @layer base {
   :root {
     /* Background & Surface Colors */
-    --background: 248 250 255; /* Very light blue-white */
-    --foreground: 240 10% 3.9%; /* Dark text */
+    --background: 0 0% 100%; /* Pure white background */
+    --foreground: 0 0% 0%; /* Black text */
     
     /* Card & Surface Elements */
     --card: 0 0% 100%; /* Pure white cards */
-    --card-foreground: 240 10% 3.9%;
-    --glass: 255 255 255 / 0.1; /* Glass morphism effect */
+    --card-foreground: 0 0% 0%;
+    --glass: 255 255 255 / 0.9; /* Clean white glass effect */
     
-    /* Brand Purple Colors */
+    /* Brand Purple Colors for accents */
     --primary: 259 94% 51%; /* Vibrant purple */
-    --primary-foreground: 0 0% 98%;
+    --primary-foreground: 0 0% 100%;
     --primary-glow: 268 83% 82%; /* Lighter purple for glows */
     
     /* Secondary & Accent */
-    --secondary: 270 20% 95%;
-    --secondary-foreground: 240 10% 3.9%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 0%;
     --accent: 259 94% 51%;
-    --accent-foreground: 0 0% 98%;
+    --accent-foreground: 0 0% 100%;
     
     /* Semantic Colors */
-    --muted: 210 40% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
     --ring: 259 94% 51%;
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(259 94% 51%), hsl(268 83% 82%));
-    --gradient-background: linear-gradient(135deg, hsl(259 94% 51%), hsl(240 100% 27%));
-    --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    --gradient-background: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 98%));
+    --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9));
     
     /* Shadows & Effects */
-    --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
     --shadow-glow: 0 0 40px hsl(259 94% 51% / 0.3);
-    --shadow-card: 0 10px 30px -10px hsl(259 94% 51% / 0.1);
+    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.1);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -51,34 +51,30 @@
   }
 
   .dark {
-    /* Dark theme - purple background with lighter foreground */
-    --background: 259 94% 51%; /* Primary purple background */
-    --foreground: 0 0% 98%;
+    /* Keep same white theme for dark mode toggle */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
     
-    /* Dark cards with glass effect */
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --glass: 255 255 255 / 0.1;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    --glass: 255 255 255 / 0.9;
     
-    /* Inverted primary colors for dark mode */
-    --primary: 0 0% 98%;
-    --primary-foreground: 259 94% 51%;
+    --primary: 259 94% 51%;
+    --primary-foreground: 0 0% 100%;
     --primary-glow: 268 83% 82%;
     
-    /* Dark mode gradients */
-    --gradient-background: linear-gradient(135deg, hsl(259 94% 51%), hsl(240 100% 27%));
-    --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    --gradient-background: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 98%));
+    --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9));
     
-    /* Adjusted borders and inputs for dark */
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
     
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --accent: 268 83% 82%;
-    --accent-foreground: 240 10% 3.9%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 0%;
+    --accent: 259 94% 51%;
+    --accent-foreground: 0 0% 100%;
   }
 }
 

@@ -12,7 +12,7 @@ import { Footer } from "./Footer";
 import { CustomCursor } from "./CustomCursor";
 
 export const Portfolio = () => {
-  const [darkMode, setDarkMode] = useState(true); // Default to dark mode
+  const [darkMode, setDarkMode] = useState(false); // Default to light mode
 
   useEffect(() => {
     // Apply dark mode class to document
