@@ -1,4 +1,6 @@
 import workspaceTilted from "@/assets/workspace-tilted.jpg";
+// Import Tableau logo from assets (assuming it exists, similar to SkillsSection)
+import tableauLogo from "@/assets/tableau-logo.png"; // Assuming this path
 
 export const TechStackSection = () => {
   const techStack = [
@@ -18,9 +20,10 @@ export const TechStackSection = () => {
       icon: "📊",
     },
     {
-      name: "Framer Motion",
-      description: "Interactive animations and UI effects",
-      icon: "🎭",
+      name: "Tableau", // Changed from "Framer Motion"
+      description: "Proficient in Tableau for data visualization and analysis", // New subtitle
+      icon: tableauLogo, // Use the imported image
+      isImage: true, // Add this property to render as an image
     },
     {
       name: "ESP32",
@@ -68,7 +71,12 @@ export const TechStackSection = () => {
                   className="flex items-center space-x-3 sm:space-x-4 glass-card p-3 sm:p-4 hover-glow transition-all duration-300"
                 >
                   <div className="w-10 h-10 sm:w-12 sm:h-12 glass-card rounded-lg flex items-center justify-center text-xl sm:text-2xl flex-shrink-0">
-                    {tech.icon}
+                    {/* Conditional rendering for image vs emoji */}
+                    {tech.isImage ? (
+                      <img src={tech.icon as string} alt={tech.name} className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain" />
+                    ) : (
+                      tech.icon
+                    )}
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="font-semibold text-base sm:text-lg">{tech.name}</h3>
