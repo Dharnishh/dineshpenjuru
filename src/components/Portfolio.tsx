@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Navbar } from "./Navbar";
 import { HeroSection } from "./sections/HeroSection";
+import { AboutMeSection } from "./sections/AboutMeSection";
 import { ServicesSection } from "./sections/ServicesSection";
 import { AboutSection } from "./sections/AboutSection";
 import { TechStackSection } from "./sections/TechStackSection";
@@ -34,6 +35,7 @@ export const Portfolio = () => {
       
       <main>
         <HeroSection />
+        <AboutMeSection />
         <ServicesSection />
         <AboutSection />
         <TechStackSection />

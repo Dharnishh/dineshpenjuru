@@ -1,4 +1,4 @@
-import { useState, forwardRef, useImperativeHandle } from "react";
+import { useState, forwardRef, useImperativeHandle, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
 interface FlipCardProps {
@@ -22,6 +22,15 @@ export const FlipCard = forwardRef<FlipCardRef, FlipCardProps>(
         setIsFlipped(show);
       },
     }));
+
+    // Auto-flip effect for homepage
+    useEffect(() => {
+      const autoFlipInterval = setInterval(() => {
+        setIsFlipped(prev => !prev);
+      }, 3000); // Flip every 3 seconds
+
+      return () => clearInterval(autoFlipInterval);
+    }, []);
 
     const handleClick = () => {
       setIsFlipped(!isFlipped);

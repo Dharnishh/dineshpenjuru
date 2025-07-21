@@ -3,8 +3,10 @@ import { FlipCard, FlipCardRef } from "@/components/FlipCard";
 import { Button } from "@/components/ui/button";
 import dineshProfile from "/lovable-uploads/edbf57cc-59e4-4b54-ae2c-8c41861472ed.png";
 import skillsClipart from "@/assets/skills-clipart.png";
+
 export const HeroSection = () => {
   const heroAvatarRef = useRef<FlipCardRef>(null);
+
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -17,29 +19,33 @@ export const HeroSection = () => {
     }, {
       threshold: 0.5
     });
+
     const skillsSection = document.getElementById("skills-section");
     const aboutSection = document.getElementById("about");
     if (skillsSection) observer.observe(skillsSection);
     if (aboutSection) observer.observe(aboutSection);
+
     return () => {
       if (skillsSection) observer.unobserve(skillsSection);
       if (aboutSection) observer.unobserve(aboutSection);
     };
   }, []);
-  return <section id="home" className="min-h-screen flex items-center section-padding pt-32">
+
+  return (
+    <section id="home" className="min-h-screen flex items-center section-padding pt-32">
       <div className="container-width">
         <div className="relative">
-          {/* Main Content Grid */}
+          {/* Main Content Grid - Matching Image 3 Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center min-h-[600px]">
-            {/* Left Column - "DATA" and Name */}
-            <div className="flex flex-col items-center lg:items-end justify-center space-y-4">
-              <h2 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-wider gradient-text">DINESH</h2>
-              <h1 className="text-2xl tracking-widest uppercase text-foreground/90 font-medium md:text-5xl">PENJURU</h1>
+            {/* Left Column - "DINESH" */}
+            <div className="flex flex-col items-center lg:items-end justify-center space-y-2">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-wider text-primary">DINESH</h1>
+              <h2 className="text-xl md:text-2xl lg:text-3xl tracking-widest uppercase text-foreground/90 font-medium">PENJURU</h2>
             </div>
 
             {/* Center Column - Profile Card */}
             <div className="flex flex-col items-center space-y-6">
-              {/* Flip Card Avatar */}
+              {/* Auto-Flip Card Avatar */}
               <FlipCard ref={heroAvatarRef} frontImage={dineshProfile} backImage={skillsClipart} alt="P.V. Dinesh" className="w-64 h-80 md:w-72 md:h-96 lg:w-80 lg:h-96" />
 
               {/* Waving Hand Button */}
@@ -48,16 +54,16 @@ export const HeroSection = () => {
               </Button>
             </div>
 
-            {/* Right Column - "ANALYST" */}
-            <div className="flex items-center justify-center lg:justify-start">
-              <h2 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-wider gradient-text text-orange-600 text-left xl:text-9xl">DATA
-ANALYST</h2>
+            {/* Right Column - "DATA ANALYST" */}
+            <div className="flex flex-col items-center lg:items-start justify-center space-y-2">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-wider text-primary">DATA</h2>
+              <h2 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-wider text-primary">ANALYST</h2>
             </div>
           </div>
 
-          {/* Bottom Description - Right Aligned */}
-          <div className="mt-8 lg:mt-12 flex justify-center lg:justify-end">
-            <div className="max-w-md text-center lg:text-right">
+          {/* Bottom Description - Center Aligned */}
+          <div className="mt-8 lg:mt-12 flex justify-center">
+            <div className="max-w-md text-center">
               <p className="text-foreground/80 text-lg leading-relaxed">
                 I'm a curious and analytical B-Tech student specializing in 
                 Electronics and Communication Engineering.
@@ -66,5 +72,6 @@ ANALYST</h2>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };

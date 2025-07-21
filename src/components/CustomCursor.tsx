@@ -7,8 +7,11 @@ export const CustomCursor = () => {
 
   useEffect(() => {
     const updateCursor = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
-      setIsVisible(true);
+      // Synchronize cursor position with actual mouse position for better tracking
+      requestAnimationFrame(() => {
+        setPosition({ x: e.clientX, y: e.clientY });
+        setIsVisible(true);
+      });
     };
 
     const handleMouseEnter = () => setIsInteracting(true);
