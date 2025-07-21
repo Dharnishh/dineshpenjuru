@@ -1,3 +1,4 @@
+// dharnishh/dineshpenjuru/dineshpenjuru-61f31d163d67f0757ff94b209afed6c793e4caa3/src/components/sections/TechStackSection.tsx
 import workspaceTilted from "@/assets/workspace-tilted.jpg";
 // Import Tableau logo from assets (assuming it exists, similar to SkillsSection)
 import tableauLogo from "@/assets/tableau-logo.png"; // Assuming this path
@@ -50,10 +51,11 @@ export const TechStackSection = () => {
   return (
     <section id="tech-stack" className="section-padding">
       <div className="container-width">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+        {/* Changed from 'lg:grid-cols-2' to 'md:grid-cols-2' */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Column - Tech Stack List */}
           <div className="space-y-6 lg:space-y-8">
-            <div className="space-y-4 text-center lg:text-left">
+            <div className="space-y-4 text-center md:text-left"> {/* Adjusted text alignment */}
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
                 My <span className="gradient-text">Tech Stack</span>
               </h2>
@@ -88,7 +90,8 @@ export const TechStackSection = () => {
           </div>
 
           {/* Right Column - Tech Stack Image */}
-          <div className="relative order-first lg:order-last">
+          {/* Adjusted order to be last on medium devices and up */}
+          <div className="relative order-first md:order-last">
             <div className="transform -rotate-2 hover:rotate-0 transition-transform duration-500">
               <img
                 src={workspaceTilted}
