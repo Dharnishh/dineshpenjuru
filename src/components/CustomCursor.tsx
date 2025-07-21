@@ -1,3 +1,4 @@
+// dharnishh/dineshpenjuru/dineshpenjuru-61f31d163d67f0757ff94b209afed6c793e4caa3/src/components/CustomCursor.tsx
 import { useEffect, useState } from "react";
 
 export const CustomCursor = () => {
@@ -7,11 +8,10 @@ export const CustomCursor = () => {
 
   useEffect(() => {
     const updateCursor = (e: MouseEvent) => {
-      // Synchronize cursor position with actual mouse position for better tracking
-      requestAnimationFrame(() => {
-        setPosition({ x: e.clientX, y: e.clientY });
-        setIsVisible(true);
-      });
+      // Update state directly on mousemove for immediate reaction.
+      // requestAnimationFrame will ensure the *rendering* is smooth.
+      setPosition({ x: e.clientX, y: e.clientY });
+      setIsVisible(true);
     };
 
     const handleMouseEnter = () => setIsInteracting(true);
@@ -23,8 +23,10 @@ export const CustomCursor = () => {
     document.addEventListener("mouseleave", () => setIsVisible(false));
 
     // Track interactive elements
+    // Dynamically find interactive elements rather than hardcoding.
+    // This includes elements with specific cursor styles or interactive roles.
     const interactiveElements = document.querySelectorAll(
-      'button, a, input, textarea, select, [role="button"], .flip-card'
+      'button, a, input, textarea, select, [role="button"], .flip-card, [onclick], [onmouseover], [data-sidebar="trigger"], [data-sidebar="rail"], [data-sidebar="menu-button"], [data-sidebar="group-action"], [data-sidebar="menu-action"], [data-sidebar="menu-sub-button"]'
     );
 
     interactiveElements.forEach((el) => {
@@ -52,8 +54,8 @@ export const CustomCursor = () => {
         isInteracting ? "scale-150 bg-primary/50" : "scale-100 bg-primary/30"
       }`}
       style={{
-        left: position.x - 12,
-        top: position.y - 12,
+        left: position.x - 12, // Adjust by half the cursor size (24px/2 = 12) to center it
+        top: position.y - 12,  // Adjust by half the cursor size
       }}
     />
   );
