@@ -4,6 +4,35 @@
 
 /* Portfolio Design System - Clean White Theme (Light Mode) */
 
+/* dharnishh/dineshpenjuru/dineshpenjuru-61f31d163d67f0757ff94b209afed6c793e4caa3/src/index.css */
+
+/* ... (previous code) ... */
+
+@layer base {
+  :root {
+    /* ... (previous light mode colors) ... */
+    --glass: 255 255 255 / 0.9; /* Slightly more opaque for light mode glass */
+    /* ... (rest of light mode colors) ... */
+  }
+
+  .dark {
+    /* ... (previous dark mode colors) ... */
+    --glass: 240 10% 10.9% / 0.8; /* More opaque for dark mode glass */
+    /* ... (rest of dark mode colors) ... */
+  }
+}
+
+@layer components {
+  /* Glass Card Effect */
+  .glass-card {
+    /* Changed from bg-white/10 to use --glass variable directly for consistency */
+    @apply bg-[hsl(var(--glass))] backdrop-blur-md border border-white/20 rounded-2xl;
+    box-shadow: var(--shadow-glass);
+  }
+  
+  /* ... (rest of components) ... */
+}
+
 @layer base {
   :root {
     /* Background & Surface Colors */
