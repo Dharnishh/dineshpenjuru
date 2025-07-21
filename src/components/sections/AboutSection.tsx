@@ -74,7 +74,7 @@ export const AboutSection = () => {
               {/* Contact Info */}
               <div className="space-y-2 text-sm text-foreground/70 text-center md:text-left">
                 <div>📞 Call : 9848284940</div>
-                <div>✉️ Email: dinesh@example.com</div>
+                <div>✉️ Email: pv123dinesh@gmail.com</div>
               </div>
 
               {/* Social Links */}
@@ -90,7 +90,7 @@ export const AboutSection = () => {
                   </a>
                 </Button>
                 <Button variant="glass" size="icon" asChild>
-                  <a href="mailto:dinesh@example.com">
+                  <a href="mailto:pv123dinesh@gmail.com">
                     <Mail className="w-5 h-5" />
                   </a>
                 </Button>
