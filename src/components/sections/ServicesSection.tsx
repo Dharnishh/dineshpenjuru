@@ -1,3 +1,4 @@
+// dharnishh/dineshpenjuru/dineshpenjuru-61f31d163d67f0757ff94b209afed6c793e4caa3/src/components/sections/ServicesSection.tsx
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import workspaceTilted from "@/assets/workspace-tilted.jpg";
@@ -35,10 +36,11 @@ export const ServicesSection = () => {
   return (
     <section id="services" className="section-padding">
       <div className="container-width">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+        {/* Changed from 'lg:grid-cols-2' to 'md:grid-cols-2' */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Column - Services List */}
           <div className="space-y-6 lg:space-y-8">
-            <div className="space-y-4 text-center lg:text-left">
+            <div className="space-y-4 text-center md:text-left"> {/* Adjusted text alignment */}
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
                 What I Can Do{" "}
                 <span className="gradient-text">For You</span>
@@ -85,7 +87,8 @@ export const ServicesSection = () => {
           </div>
 
           {/* Right Column - Tilted Image */}
-          <div className="relative order-first lg:order-last">
+          {/* Adjusted order to be last on medium devices and up */}
+          <div className="relative order-first md:order-last">
             <div className="transform rotate-3 hover:rotate-1 transition-transform duration-500">
               <img
                 src={workspaceTilted}
