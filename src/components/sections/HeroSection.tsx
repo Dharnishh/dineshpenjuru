@@ -39,7 +39,7 @@ export const HeroSection = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center min-h-[600px]">
             {/* Left Column - "DINESH" */}
             <div className="flex flex-col items-center lg:items-end justify-center space-y-2">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-wider text-primary">DINESH</h1>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-wider gradient-text">DINESH</h1>
               <h2 className="text-xl md:text-2xl lg:text-3xl tracking-widest uppercase text-foreground/90 font-medium">PENJURU</h2>
             </div>
 
@@ -56,8 +56,8 @@ export const HeroSection = () => {
 
             {/* Right Column - "DATA ANALYST" */}
             <div className="flex flex-col items-center lg:items-start justify-center space-y-2">
-              <h2 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-wider text-primary">DATA</h2>
-              <h2 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-wider text-primary">ANALYST</h2>
+              <h2 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-wider gradient-text">DATA</h2>
+              <h2 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-wider gradient-text">ANALYST</h2>
             </div>
           </div>
 
