@@ -58,15 +58,15 @@ export const AboutSection = () => {
 
               <div className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 py-4 lg:py-6">
                 <div className="text-center">
-                  <div className="text-2xl sm:text-3xl font-bold gradient-text">Fresher</div>
-                  <div className="text-xs sm:text-sm text-foreground/60">Years Experience</div>
+                  <div className="text-xl sm:text-3xl font-bold gradient-text"> Fresher </div>
+                  <div className="text-xs sm:text-sm text-foreground/60"> Years Experience </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl sm:text-3xl font-bold gradient-text">4</div>
+                  <div className="text-xl sm:text-3xl font-bold gradient-text">4</div>
                   <div className="text-xs sm:text-sm text-foreground/60">Projects Completed</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl sm:text-3xl font-bold gradient-text">5+</div>
+                  <div className="text-xl sm:text-3xl font-bold gradient-text">5+</div>
                   <div className="text-xs sm:text-sm text-foreground/60">Technologies</div>
                 </div>
               </div>
@@ -80,12 +80,12 @@ export const AboutSection = () => {
               {/* Social Links */}
               <div className="flex space-x-4 justify-center md:justify-start">
                 <Button variant="glass" size="icon" asChild>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.linkedin.com/in/pv-dinesh" target="_blank" rel="noopener noreferrer">
                     <Linkedin className="w-5 h-5" />
                   </a>
                 </Button>
                 <Button variant="glass" size="icon" asChild>
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/Dharnishh" target="_blank" rel="noopener noreferrer">
                     <Github className="w-5 h-5" />
                   </a>
                 </Button>
