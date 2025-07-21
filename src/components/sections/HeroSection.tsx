@@ -1,3 +1,4 @@
+// dharnishh/dineshpenjuru/dineshpenjuru-61f31d163d67f0757ff94b209afed6c793e4caa3/src/components/sections/HeroSection.tsx
 import { useRef, useEffect } from "react";
 import { FlipCard, FlipCardRef } from "@/components/FlipCard";
 import { Button } from "@/components/ui/button";
@@ -35,16 +36,19 @@ export const HeroSection = () => {
     <section id="home" className="min-h-screen flex items-center section-padding pt-20 sm:pt-24 lg:pt-32">
       <div className="container-width">
         <div className="relative">
-          {/* Main Content Grid - Matching Image 3 Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-center min-h-[500px] sm:min-h-[600px]">
+          {/* Main Content Grid - Changed from 'lg:grid-cols-3' to 'md:grid-cols-3' */}
+          {/* This will make the 3-column layout start at the 'md' breakpoint (768px) and above */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-center min-h-[500px] sm:min-h-[600px]">
             {/* Left Column - "DINESH" */}
-            <div className="flex flex-col items-center lg:items-end justify-center space-y-2">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-wider gradient-text text-center lg:text-right">DINESH</h1>
-              <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl tracking-widest uppercase text-foreground/90 font-medium text-center lg:text-right">PENJURU</h2>
+            <div className="flex flex-col items-center md:items-end justify-center space-y-2">
+              {/* Adjusted text alignment to be right-aligned on medium devices and up */}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-wider gradient-text text-center md:text-right">DINESH</h1>
+              <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl tracking-widest uppercase text-foreground/90 font-medium text-center md:text-right">PENJURU</h2>
             </div>
 
             {/* Center Column - Profile Card */}
-            <div className="flex flex-col items-center space-y-4 sm:space-y-6 order-first lg:order-none">
+            {/* Changed order to be central on medium devices and up */}
+            <div className="flex flex-col items-center space-y-4 sm:space-y-6 order-first md:order-none">
               {/* Auto-Flip Card Avatar */}
               <div className="relative">
                 <FlipCard 
@@ -52,6 +56,7 @@ export const HeroSection = () => {
                   frontImage={dineshProfile} 
                   backImage={skillsClipart} 
                   alt="P.V. Dinesh" 
+                  // Kept responsive sizing for better fit across different smaller viewports
                   className="w-48 h-60 sm:w-56 sm:h-72 md:w-64 md:h-80 lg:w-72 lg:h-90 xl:w-80 xl:h-96" 
                 />
                 
@@ -63,13 +68,14 @@ export const HeroSection = () => {
             </div>
 
             {/* Right Column - "DATA ANALYST" */}
-            <div className="flex flex-col items-center lg:items-start justify-center space-y-2">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-wider gradient-text text-center lg:text-left">DATA</h2>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-wider gradient-text text-center lg:text-left">ANALYST</h2>
+            <div className="flex flex-col items-center md:items-start justify-center space-y-2">
+              {/* Adjusted text alignment to be left-aligned on medium devices and up */}
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-wider gradient-text text-center md:text-left">DATA</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-wider gradient-text text-center md:text-left">ANALYST</h2>
               
-              {/* Description moved here */}
-              <div className="mt-4 max-w-xs sm:max-w-sm md:max-w-md px-4 lg:px-0">
-                <p className="text-foreground/80 text-lg leading-relaxed text-center lg:text-left">
+              {/* Description alignment adjusted for medium devices and up */}
+              <div className="mt-4 max-w-xs sm:max-w-sm md:max-w-md px-4 md:px-0">
+                <p className="text-foreground/80 text-lg leading-relaxed text-center md:text-left">
                   I'm a curious and analytical B-Tech student specializing in 
                   Electronics and Communication Engineering.
                 </p>
