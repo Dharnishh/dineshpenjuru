@@ -32,25 +32,31 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <section id="home" className="min-h-screen flex items-center section-padding pt-32">
+    <section id="home" className="min-h-screen flex items-center section-padding pt-20 sm:pt-24 lg:pt-32">
       <div className="container-width">
         <div className="relative">
           {/* Main Content Grid - Matching Image 3 Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center min-h-[600px]">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-center min-h-[500px] sm:min-h-[600px]">
             {/* Left Column - "DINESH" */}
             <div className="flex flex-col items-center lg:items-end justify-center space-y-2">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-wider gradient-text">DINESH</h1>
-              <h2 className="text-xl md:text-2xl lg:text-3xl tracking-widest uppercase text-foreground/90 font-medium">PENJURU</h2>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-wider gradient-text text-center lg:text-right">DINESH</h1>
+              <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl tracking-widest uppercase text-foreground/90 font-medium text-center lg:text-right">PENJURU</h2>
             </div>
 
             {/* Center Column - Profile Card */}
-            <div className="flex flex-col items-center space-y-6">
+            <div className="flex flex-col items-center space-y-4 sm:space-y-6 order-first lg:order-none">
               {/* Auto-Flip Card Avatar */}
               <div className="relative">
-                <FlipCard ref={heroAvatarRef} frontImage={dineshProfile} backImage={skillsClipart} alt="P.V. Dinesh" className="w-64 h-80 md:w-72 md:h-96 lg:w-80 lg:h-96" />
+                <FlipCard 
+                  ref={heroAvatarRef} 
+                  frontImage={dineshProfile} 
+                  backImage={skillsClipart} 
+                  alt="P.V. Dinesh" 
+                  className="w-48 h-60 sm:w-56 sm:h-72 md:w-64 md:h-80 lg:w-72 lg:h-90 xl:w-80 xl:h-96" 
+                />
                 
                 {/* Waving Hand Button - Left side, bottom of flipcard */}
-                <Button variant="glass" size="icon" className="absolute -left-8 bottom-4 w-16 h-16 rounded-full text-2xl hover-glow animate-float bg-primary/20">
+                <Button variant="glass" size="icon" className="absolute -left-4 sm:-left-6 lg:-left-8 bottom-2 sm:bottom-4 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full text-lg sm:text-xl lg:text-2xl hover-glow animate-float bg-primary/20">
                   👋
                 </Button>
               </div>
@@ -58,11 +64,11 @@ export const HeroSection = () => {
 
             {/* Right Column - "DATA ANALYST" */}
             <div className="flex flex-col items-center lg:items-start justify-center space-y-2">
-              <h2 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-wider gradient-text">DATA</h2>
-              <h2 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-wider gradient-text">ANALYST</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-wider gradient-text text-center lg:text-left">DATA</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-wider gradient-text text-center lg:text-left">ANALYST</h2>
               
               {/* Description moved here */}
-              <div className="mt-4 max-w-md">
+              <div className="mt-4 max-w-xs sm:max-w-sm md:max-w-md px-4 lg:px-0">
                 <p className="text-foreground/80 text-lg leading-relaxed text-center lg:text-left">
                   I'm a curious and analytical B-Tech student specializing in 
                   Electronics and Communication Engineering.

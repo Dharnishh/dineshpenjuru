@@ -27,18 +27,18 @@ export const ContactSection = () => {
   return (
     <section id="contact" className="section-padding">
       <div className="container-width">
-        <div className="max-w-2xl mx-auto space-y-12">
+        <div className="max-w-2xl mx-auto space-y-8 lg:space-y-12">
           <div className="text-center space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
               Let's Work <span className="gradient-text">Together</span>
             </h2>
-            <p className="text-foreground/70 text-lg">
+            <p className="text-foreground/70 text-base sm:text-lg px-4">
               Ready to transform your data into actionable insights? Let's discuss your project.
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="glass-card p-8 space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <form onSubmit={handleSubmit} className="glass-card p-4 sm:p-6 lg:p-8 space-y-4 sm:space-y-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               <div className="space-y-2">
                 <label htmlFor="name" className="text-sm font-medium">
                   Name *
@@ -70,7 +70,7 @@ export const ContactSection = () => {
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="service" className="text-sm font-medium">
+              <label htmlFor="service" className="text-sm font-medium block">
                 Service Needed
               </label>
               <Select value={formData.service} onValueChange={(value) => handleChange("service", value)}>
@@ -88,7 +88,7 @@ export const ContactSection = () => {
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="message" className="text-sm font-medium">
+              <label htmlFor="message" className="text-sm font-medium block">
                 Message *
               </label>
               <Textarea
@@ -97,7 +97,7 @@ export const ContactSection = () => {
                 onChange={(e) => handleChange("message", e.target.value)}
                 placeholder="Tell me about your project..."
                 required
-                rows={5}
+                rows={4}
                 className="bg-white/5 border-white/20"
               />
             </div>

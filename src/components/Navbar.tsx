@@ -44,27 +44,27 @@ export const Navbar = ({ darkMode, toggleDarkMode }: NavbarProps) => {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isHomePage ? "opacity-0 pointer-events-none" : "opacity-100"
-        } ${scrolled || !isHomePage ? "glass-card backdrop-blur-xl" : "bg-transparent"}`}
+        } ${scrolled || !isHomePage ? "glass-card backdrop-blur-xl" : "bg-transparent"} px-2 sm:px-0`}
       >
         <div className="w-full h-1 bg-gradient-primary"></div>
-      <div className="container-width px-4 sm:px-6">
+      <div className="container-width px-2 sm:px-4 lg:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Avatar */}
           <div className="flex items-center">
             <img
               src={dineshProfile}
               alt="P.V. Dinesh"
-              className="w-10 h-10 rounded-full object-cover border-2 border-primary/20"
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover border-2 border-primary/20"
             />
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-foreground/80 hover:text-primary transition-colors duration-300 font-medium"
+                className="text-foreground/80 hover:text-primary transition-colors duration-300 font-medium text-sm xl:text-base"
               >
                 {item.name}
               </a>
@@ -72,60 +72,62 @@ export const Navbar = ({ darkMode, toggleDarkMode }: NavbarProps) => {
           </div>
 
           {/* Theme Toggle & Contact Button */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-3 xl:space-x-4">
             <Button
               variant="ghost"
               size="icon"
               onClick={toggleDarkMode}
-              className="rounded-full"
+              className="rounded-full w-8 h-8 xl:w-10 xl:h-10"
             >
-              {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              {darkMode ? <Sun className="h-4 w-4 xl:h-5 xl:w-5" /> : <Moon className="h-4 w-4 xl:h-5 xl:w-5" />}
             </Button>
-            <Button variant="contact" asChild>
+            <Button variant="contact" size="sm" asChild className="text-sm xl:text-base px-4 xl:px-8">
               <a href="#contact">Contact</a>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-2">
+          <div className="lg:hidden flex items-center space-x-2">
             <Button
               variant="ghost"
               size="icon"
               onClick={toggleDarkMode}
-              className="rounded-full"
+              className="rounded-full w-8 h-8"
             >
-              {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              {darkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </Button>
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="rounded-full"
+              className="rounded-full w-8 h-8"
             >
-              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {isMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
             </Button>
           </div>
         </div>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 glass-card backdrop-blur-xl border-t border-white/10">
-            <div className="px-4 py-6 space-y-4">
+          <div className="lg:hidden absolute top-full left-0 right-0 glass-card backdrop-blur-xl border-t border-white/10 mx-2 sm:mx-0 rounded-b-2xl">
+            <div className="px-4 py-4 sm:py-6 space-y-3 sm:space-y-4">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block text-foreground/80 hover:text-primary transition-colors duration-300 font-medium py-2"
+                  className="block text-foreground/80 hover:text-primary transition-colors duration-300 font-medium py-2 text-center"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
-              <Button variant="contact" className="w-full mt-4" asChild>
+              <div className="pt-2">
+                <Button variant="contact" className="w-full" asChild>
                 <a href="#contact" onClick={() => setIsMenuOpen(false)}>
                   Contact
                 </a>
-              </Button>
+                </Button>
+              </div>
             </div>
           </div>
         )}

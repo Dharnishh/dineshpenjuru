@@ -33,49 +33,49 @@ export const AboutSection = () => {
   return (
     <section id="about" className="section-padding">
       <div className="container-width">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Column - About Text & Social Links */}
-          <div className="space-y-8">
-            <div className="space-y-6">
+          <div className="space-y-6 lg:space-y-8 order-2 lg:order-1">
+            <div className="space-y-4 lg:space-y-6">
               <div className="inline-flex items-center space-x-2 glass-card px-4 py-2 rounded-full">
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-glow-pulse"></div>
                 <span className="text-sm font-medium">Available for work</span>
               </div>
               
-              <h2 className="text-4xl md:text-5xl font-bold">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center lg:text-left">
                 About <span className="gradient-text">Me</span>
               </h2>
               
-              <p className="text-foreground/80 text-lg leading-relaxed">
+              <p className="text-foreground/80 text-base sm:text-lg leading-relaxed text-center lg:text-left">
                 Hi, I'm Dinesh — a passionate data analyst and Python developer focused on 
                 building AI tools, working with data, and applying ECE skills into real-world 
                 products. I'm currently looking for internships or job roles where I can apply 
                 my analytical skills and contribute to meaningful projects.
               </p>
 
-              <div className="grid grid-cols-3 gap-8 py-6">
+              <div className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 py-4 lg:py-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold gradient-text">2+</div>
-                  <div className="text-sm text-foreground/60">Years Experience</div>
+                  <div className="text-2xl sm:text-3xl font-bold gradient-text">2+</div>
+                  <div className="text-xs sm:text-sm text-foreground/60">Years Experience</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold gradient-text">15+</div>
-                  <div className="text-sm text-foreground/60">Projects Completed</div>
+                  <div className="text-2xl sm:text-3xl font-bold gradient-text">15+</div>
+                  <div className="text-xs sm:text-sm text-foreground/60">Projects Completed</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold gradient-text">5+</div>
-                  <div className="text-sm text-foreground/60">Technologies</div>
+                  <div className="text-2xl sm:text-3xl font-bold gradient-text">5+</div>
+                  <div className="text-xs sm:text-sm text-foreground/60">Technologies</div>
                 </div>
               </div>
 
               {/* Contact Info */}
-              <div className="space-y-2 text-sm text-foreground/70">
+              <div className="space-y-2 text-sm text-foreground/70 text-center lg:text-left">
                 <div>📞 Call Today: +1 (555) 123-4567</div>
                 <div>✉️ Email: dinesh@example.com</div>
               </div>
 
               {/* Social Links */}
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 justify-center lg:justify-start">
                 <Button variant="glass" size="icon" asChild>
                   <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
                     <Linkedin className="w-5 h-5" />
@@ -93,20 +93,22 @@ export const AboutSection = () => {
                 </Button>
               </div>
 
-              <Button variant="outline" size="lg">
+              <div className="flex justify-center lg:justify-start">
+                <Button variant="outline" size="lg">
                 My Story
-              </Button>
+                </Button>
+              </div>
             </div>
           </div>
 
           {/* Right Column - About Flip Card */}
-          <div className="relative">
+          <div className="relative order-1 lg:order-2">
             <FlipCard
               ref={aboutAvatarRef}
               frontImage={dineshProfile}
               backImage={skillsClipart}
               alt="P.V. Dinesh - About"
-              className="w-96 h-96 mx-auto"
+              className="w-64 h-80 sm:w-80 sm:h-96 lg:w-96 lg:h-96 mx-auto"
             />
           </div>
         </div>

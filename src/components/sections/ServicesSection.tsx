@@ -35,15 +35,15 @@ export const ServicesSection = () => {
   return (
     <section id="services" className="section-padding">
       <div className="container-width">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Column - Services List */}
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-4xl md:text-5xl font-bold">
+          <div className="space-y-6 lg:space-y-8">
+            <div className="space-y-4 text-center lg:text-left">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
                 What I Can Do{" "}
                 <span className="gradient-text">For You</span>
               </h2>
-              <p className="text-foreground/70 text-lg">
+              <p className="text-foreground/70 text-base sm:text-lg">
                 As a data analyst, I am a visual storyteller, crafting 
                 experiences that connect deeply and spark creativity.
               </p>
@@ -53,26 +53,28 @@ export const ServicesSection = () => {
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="glass-card p-6 hover-glow cursor-pointer transition-all duration-300"
+                  className="glass-card p-4 sm:p-6 hover-glow cursor-pointer transition-all duration-300"
                   onClick={() => toggleService(index)}
                 >
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-4">
-                      <span className="text-2xl font-bold gradient-text">
+                  <div className="flex items-center justify-between flex-wrap gap-2">
+                    <div className="flex items-center space-x-3 sm:space-x-4 flex-1 min-w-0">
+                      <span className="text-xl sm:text-2xl font-bold gradient-text flex-shrink-0">
                         {service.number}.
                       </span>
-                      <h3 className="text-xl font-semibold">{service.title}</h3>
+                      <h3 className="text-lg sm:text-xl font-semibold truncate">{service.title}</h3>
                     </div>
-                    {expandedService === index ? (
+                    <div className="flex-shrink-0">
+                      {expandedService === index ? (
                       <ChevronUp className="w-5 h-5 text-primary" />
-                    ) : (
+                      ) : (
                       <ChevronDown className="w-5 h-5 text-foreground/60" />
-                    )}
+                      )}
+                    </div>
                   </div>
                   
                   {expandedService === index && (
-                    <div className="mt-4 pt-4 border-t border-white/10">
-                      <p className="text-foreground/80 leading-relaxed">
+                    <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-white/10">
+                      <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
                         {service.description}
                       </p>
                     </div>
@@ -83,12 +85,12 @@ export const ServicesSection = () => {
           </div>
 
           {/* Right Column - Tilted Image */}
-          <div className="relative">
+          <div className="relative order-first lg:order-last">
             <div className="transform rotate-3 hover:rotate-1 transition-transform duration-500">
               <img
                 src={workspaceTilted}
                 alt="Data Analytics Workspace"
-                className="w-full rounded-2xl shadow-card hover-glow"
+                className="w-full max-w-md lg:max-w-none mx-auto rounded-2xl shadow-card hover-glow"
               />
             </div>
           </div>

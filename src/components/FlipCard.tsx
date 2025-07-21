@@ -40,7 +40,7 @@ export const FlipCard = forwardRef<FlipCardRef, FlipCardProps>(
     return (
       <div
         className={cn(
-          "flip-card cursor-pointer w-80 h-80 mx-auto",
+          "flip-card cursor-pointer mx-auto",
           isFlipped && "flipped",
           className
         )}
@@ -52,7 +52,7 @@ export const FlipCard = forwardRef<FlipCardRef, FlipCardProps>(
             <img
               src={frontImage}
               alt={alt}
-              className="w-full h-full object-cover rounded-xl"
+              className="w-full h-full object-cover rounded-xl object-center"
             />
           </div>
 
@@ -61,7 +61,7 @@ export const FlipCard = forwardRef<FlipCardRef, FlipCardProps>(
             <img
               src={backImage}
               alt={`${alt} - Skills`}
-              className="w-full h-full object-cover rounded-xl"
+              className="w-full h-full object-cover rounded-xl object-center"
             />
           </div>
         </div>
