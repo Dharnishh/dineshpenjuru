@@ -4,34 +4,27 @@ import { Button } from "@/components/ui/button";
 import { Linkedin, Github, Mail } from "lucide-react";
 import dineshProfile from "@/assets/dinesh-profile.jpg";
 import skillsClipart from "@/assets/skills-clipart.png";
-
 export const AboutSection = () => {
   const aboutAvatarRef = useRef<FlipCardRef>(null);
-
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.target.id === "about" && entry.isIntersecting) {
-            aboutAvatarRef.current?.flip(true);
-          } else if (!entry.isIntersecting) {
-            aboutAvatarRef.current?.flip(false);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.target.id === "about" && entry.isIntersecting) {
+          aboutAvatarRef.current?.flip(true);
+        } else if (!entry.isIntersecting) {
+          aboutAvatarRef.current?.flip(false);
+        }
+      });
+    }, {
+      threshold: 0.5
+    });
     const aboutSection = document.getElementById("about");
     if (aboutSection) observer.observe(aboutSection);
-
     return () => {
       if (aboutSection) observer.unobserve(aboutSection);
     };
   }, []);
-
-  return (
-    <section id="about" className="section-padding">
+  return <section id="about" className="section-padding">
       <div className="container-width">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Column - About Text & Social Links */}
@@ -55,11 +48,11 @@ export const AboutSection = () => {
 
               <div className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 py-4 lg:py-6">
                 <div className="text-center">
-                  <div className="text-2xl sm:text-3xl font-bold gradient-text">2+</div>
+                  <div className="text-2xl sm:text-3xl font-bold gradient-text">Fresher</div>
                   <div className="text-xs sm:text-sm text-foreground/60">Years Experience</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl sm:text-3xl font-bold gradient-text">15+</div>
+                  <div className="text-2xl sm:text-3xl font-bold gradient-text">4</div>
                   <div className="text-xs sm:text-sm text-foreground/60">Projects Completed</div>
                 </div>
                 <div className="text-center">
@@ -70,7 +63,7 @@ export const AboutSection = () => {
 
               {/* Contact Info */}
               <div className="space-y-2 text-sm text-foreground/70 text-center lg:text-left">
-                <div>📞 Call Today: +1 (555) 123-4567</div>
+                <div>📞 Call : 9848284940</div>
                 <div>✉️ Email: dinesh@example.com</div>
               </div>
 
@@ -103,16 +96,9 @@ export const AboutSection = () => {
 
           {/* Right Column - About Flip Card */}
           <div className="relative order-1 lg:order-2">
-            <FlipCard
-              ref={aboutAvatarRef}
-              frontImage={dineshProfile}
-              backImage={skillsClipart}
-              alt="P.V. Dinesh - About"
-              className="w-64 h-80 sm:w-80 sm:h-96 lg:w-96 lg:h-96 mx-auto"
-            />
+            <FlipCard ref={aboutAvatarRef} frontImage={dineshProfile} backImage={skillsClipart} alt="P.V. Dinesh - About" className="w-64 h-80 sm:w-80 sm:h-96 lg:w-96 lg:h-96 mx-auto" />
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
