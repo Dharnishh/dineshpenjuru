@@ -46,30 +46,31 @@ export const HeroSection = () => {
             {/* Center Column - Profile Card */}
             <div className="flex flex-col items-center space-y-6">
               {/* Auto-Flip Card Avatar */}
-              <FlipCard ref={heroAvatarRef} frontImage={dineshProfile} backImage={skillsClipart} alt="P.V. Dinesh" className="w-64 h-80 md:w-72 md:h-96 lg:w-80 lg:h-96" />
-
-              {/* Waving Hand Button */}
-              <Button variant="glass" size="icon" className="w-16 h-16 rounded-full text-2xl hover-glow animate-float bg-primary/20">
-                👋
-              </Button>
+              <div className="relative">
+                <FlipCard ref={heroAvatarRef} frontImage={dineshProfile} backImage={skillsClipart} alt="P.V. Dinesh" className="w-64 h-80 md:w-72 md:h-96 lg:w-80 lg:h-96" />
+                
+                {/* Waving Hand Button - Left side, bottom of flipcard */}
+                <Button variant="glass" size="icon" className="absolute -left-8 bottom-4 w-16 h-16 rounded-full text-2xl hover-glow animate-float bg-primary/20">
+                  👋
+                </Button>
+              </div>
             </div>
 
             {/* Right Column - "DATA ANALYST" */}
             <div className="flex flex-col items-center lg:items-start justify-center space-y-2">
               <h2 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-wider gradient-text">DATA</h2>
               <h2 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-wider gradient-text">ANALYST</h2>
+              
+              {/* Description moved here */}
+              <div className="mt-4 max-w-md">
+                <p className="text-foreground/80 text-lg leading-relaxed text-center lg:text-left">
+                  I'm a curious and analytical B-Tech student specializing in 
+                  Electronics and Communication Engineering.
+                </p>
+              </div>
             </div>
           </div>
 
-          {/* Bottom Description - Center Aligned */}
-          <div className="mt-8 lg:mt-12 flex justify-center">
-            <div className="max-w-md text-center">
-              <p className="text-foreground/80 text-lg leading-relaxed">
-                I'm a curious and analytical B-Tech student specializing in 
-                Electronics and Communication Engineering.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </section>

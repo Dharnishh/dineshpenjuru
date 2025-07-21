@@ -1,10 +1,12 @@
+import tableauLogo from "@/assets/tableau-logo.png";
+
 export const SkillsSection = () => {
   const skills = [
     { name: "Python", level: 90, icon: "🐍" },
     { name: "Power BI", level: 85, icon: "📊" },
     { name: "SQL", level: 80, icon: "🗃️" },
     { name: "Data Cleaning", level: 88, icon: "🧹" },
-    { name: "Framer Motion", level: 75, icon: "🎭" },
+    { name: "Tableau", level: 75, icon: tableauLogo, isImage: true },
     { name: "ESP32", level: 70, icon: "🔧" },
     { name: "AI Tools", level: 82, icon: "🤖" },
     { name: "HTML/CSS/JS", level: 78, icon: "🌐" },
@@ -29,7 +31,13 @@ export const SkillsSection = () => {
                 key={index}
                 className="glass-card p-6 text-center hover-glow transition-all duration-300 space-y-4"
               >
-                <div className="text-4xl">{skill.icon}</div>
+                <div className="text-4xl">
+                  {skill.isImage ? (
+                    <img src={skill.icon} alt={skill.name} className="w-12 h-12 mx-auto object-contain" />
+                  ) : (
+                    skill.icon
+                  )}
+                </div>
                 <div className="space-y-2">
                   <h3 className="font-semibold">{skill.name}</h3>
                   <div className="w-full bg-white/10 rounded-full h-2">

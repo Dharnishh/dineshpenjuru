@@ -11,6 +11,7 @@ interface NavbarProps {
 export const Navbar = ({ darkMode, toggleDarkMode }: NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isHomePage, setIsHomePage] = useState(true);
 
   const navItems = [
     { name: "Home", href: "#home" },
@@ -26,17 +27,26 @@ export const Navbar = ({ darkMode, toggleDarkMode }: NavbarProps) => {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
+      // Check if we're on the home section
+      const homeSection = document.getElementById("home");
+      if (homeSection) {
+        const rect = homeSection.getBoundingClientRect();
+        setIsHomePage(rect.bottom > window.innerHeight * 0.3);
+      }
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass-card backdrop-blur-xl" : "bg-transparent"
-      }`}
-    >
+    <>
+      {/* Navigation bar - hidden on home page, visible on other sections */}
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isHomePage ? "opacity-0 pointer-events-none" : "opacity-100"
+        } ${scrolled || !isHomePage ? "glass-card backdrop-blur-xl" : "bg-transparent"}`}
+      >
+        <div className="w-full h-1 bg-gradient-primary"></div>
       <div className="container-width px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Avatar */}
@@ -121,5 +131,6 @@ export const Navbar = ({ darkMode, toggleDarkMode }: NavbarProps) => {
         )}
       </div>
     </nav>
+    </>
   );
 };

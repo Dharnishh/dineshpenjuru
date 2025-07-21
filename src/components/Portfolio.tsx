@@ -13,14 +13,20 @@ import { Footer } from "./Footer";
 import { CustomCursor } from "./CustomCursor";
 
 export const Portfolio = () => {
-  const [darkMode, setDarkMode] = useState(false); // Default to light mode
+  const [darkMode, setDarkMode] = useState(() => {
+    // Check localStorage for saved theme preference
+    const savedTheme = localStorage.getItem("darkMode");
+    return savedTheme ? JSON.parse(savedTheme) : false;
+  });
 
   useEffect(() => {
-    // Apply dark mode class to document
+    // Apply dark mode class to document and save to localStorage
     if (darkMode) {
       document.documentElement.classList.add("dark");
+      localStorage.setItem("darkMode", "true");
     } else {
       document.documentElement.classList.remove("dark");
+      localStorage.setItem("darkMode", "false");
     }
   }, [darkMode]);
 
