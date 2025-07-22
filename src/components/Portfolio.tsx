@@ -4,6 +4,7 @@ import { HeroSection } from "./sections/HeroSection";
 
 import { ServicesSection } from "./sections/ServicesSection";
 import { AboutSection } from "./sections/AboutSection";
+import { AchievementsSection } from "./sections/AchievementsSection";
 import { TechStackSection } from "./sections/TechStackSection";
 import { ExperienceSection } from "./sections/ExperienceSection";
 import { ProjectsSection } from "./sections/ProjectsSection";
@@ -43,6 +44,7 @@ export const Portfolio = () => {
         <HeroSection />
         <ServicesSection />
         <AboutSection />
+        <AchievementsSection />
         <TechStackSection />
         <ExperienceSection />
         <ProjectsSection />
