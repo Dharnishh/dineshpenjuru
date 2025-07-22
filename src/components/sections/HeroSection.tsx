@@ -34,7 +34,7 @@ export const HeroSection = () => {
   return (
     // Removed min-h-screen to allow content to dictate height more naturally.
     // Adjusted top padding to be less aggressive, especially on smaller screens.
-    <section id="home" className="flex items-center section-padding py-12 sm:py-16 lg:py-20">
+    <section id="home" className="flex items-center section-padding py-4 sm:py-6 lg:py-8">
       <div className="container-width">
         <div className="relative">
           {/* Main Content Grid - Changed from 'lg:grid-cols-3' to 'md:grid-cols-3' */}
