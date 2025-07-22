@@ -115,7 +115,7 @@ export const Navbar = ({ darkMode, toggleDarkMode }: NavbarProps) => {
 
           {/* Mobile Menu - Enhanced Styling */}
           {isMenuOpen && (
-            <div className="lg:hidden absolute top-full left-0 right-0 glass-card backdrop-blur-xl border-t border-white/10 mx-2 sm:mx-0 rounded-b-2xl">
+            <div className="lg:hidden absolute top-full left-0 right-0 glass-card backdrop-blur-2xl bg-background/80 border-t border-white/20 mx-2 sm:mx-0 rounded-b-2xl shadow-2xl">
               <div className="px-4 py-4 sm:py-6 space-y-3 sm:space-y-4">
                 {navItems.map((item) => (
                   <a
