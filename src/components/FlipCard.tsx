@@ -48,20 +48,20 @@ export const FlipCard = forwardRef<FlipCardRef, FlipCardProps>(
       >
         <div className="flip-card-inner">
           {/* Front */}
-          <div className="flip-card-front glass-card p-4 flex items-center justify-center">
+          <div className="flip-card-front glass-card overflow-hidden">
             <img
               src={frontImage}
               alt={alt}
-              className="w-full h-full object-cover rounded-xl object-center"
+              className="w-full h-full object-cover object-center"
             />
           </div>
 
           {/* Back */}
-          <div className="flip-card-back glass-card p-4 flex items-center justify-center">
+          <div className="flip-card-back glass-card overflow-hidden">
             <img
               src={backImage}
-              alt={`${alt} - Skills`}
-              className="w-full h-full object-cover rounded-xl object-center"
+              alt={`${alt} - Blurred`}
+              className="w-full h-full object-cover object-center blur-sm"
             />
           </div>
         </div>

@@ -3,8 +3,8 @@ import { useRef, useEffect } from "react";
 import { FlipCard, FlipCardRef } from "@/components/FlipCard";
 import { Button } from "@/components/ui/button";
 import { Linkedin, Github, Mail } from "lucide-react";
-import dineshProfile from "@/assets/dinesh-profile.jpg";
-import skillsClipart from "@/assets/skills-clipart.png";
+import dineshProfile from "/lovable-uploads/42af4fe2-04ee-44a9-b7ea-c2aed20956f1.png";
+import dineshBlurred from "/lovable-uploads/42af4fe2-04ee-44a9-b7ea-c2aed20956f1.png";
 
 export const AboutSection = () => {
   const aboutAvatarRef = useRef<FlipCardRef>(null);
@@ -107,7 +107,7 @@ export const AboutSection = () => {
           {/* Right Column - About Flip Card */}
           {/* Adjusted order to be second on medium devices and up */}
           <div className="relative order-1 md:order-2">
-            <FlipCard ref={aboutAvatarRef} frontImage={dineshProfile} backImage={skillsClipart} alt="P.V. Dinesh - About" className="w-64 h-80 sm:w-80 sm:h-96 lg:w-96 lg:h-96 mx-auto" />
+            <FlipCard ref={aboutAvatarRef} frontImage={dineshProfile} backImage={dineshBlurred} alt="P.V. Dinesh - About" className="w-64 h-80 sm:w-80 sm:h-96 lg:w-96 lg:h-96 mx-auto" />
           </div>
         </div>
       </div>
