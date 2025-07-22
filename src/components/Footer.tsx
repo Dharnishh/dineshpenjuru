@@ -16,9 +16,7 @@ export const Footer = () => {
 
           <div className="flex items-center space-x-3 sm:space-x-4">
             <Button variant="ghost" size="icon" asChild>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
-              </a>
+              
             </Button>
           </div>
         </div>
