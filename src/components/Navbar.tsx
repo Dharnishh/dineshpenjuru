@@ -46,15 +46,14 @@ export const Navbar = ({ darkMode, toggleDarkMode }: NavbarProps) => {
 
   return (
     <>
-      {/* Navigation bar - hidden on home page, visible on other sections */}
+      {/* Navigation bar - floating popup style */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-4 left-4 right-4 z-50 transition-all duration-300 ${
           isHomePage ? "opacity-0 pointer-events-none" : "opacity-100"
-        } ${scrolled || !isHomePage ? "glass-card backdrop-blur-xl" : "bg-transparent"} px-2 sm:px-0`}
+        }`}
       >
-        <div className="w-full h-1 bg-gradient-primary"></div>
-        <div className="container-width px-2 sm:px-4 lg:px-6">
-          <div className="flex items-center justify-between h-16">
+        <div className={`max-w-4xl mx-auto ${scrolled || !isHomePage ? "glass-card backdrop-blur-xl" : "bg-transparent"} rounded-2xl shadow-2xl border border-white/10 px-4 sm:px-6`}>
+          <div className="flex items-center justify-between h-16 px-2">
             {/* Avatar */}
             <div className="flex items-center">
               <img
@@ -115,7 +114,7 @@ export const Navbar = ({ darkMode, toggleDarkMode }: NavbarProps) => {
 
           {/* Mobile Menu - Enhanced Styling */}
           {isMenuOpen && (
-            <div className="lg:hidden absolute top-full left-0 right-0 glass-card backdrop-blur-2xl bg-background/80 border-t border-white/20 mx-2 sm:mx-0 rounded-b-2xl shadow-2xl">
+            <div className="lg:hidden mt-2 glass-card backdrop-blur-2xl bg-background/80 border border-white/20 rounded-2xl shadow-2xl">
               <div className="px-4 py-4 sm:py-6 space-y-3 sm:space-y-4">
                 {navItems.map((item) => (
                   <a
