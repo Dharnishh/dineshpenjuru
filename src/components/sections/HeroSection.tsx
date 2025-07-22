@@ -1,8 +1,35 @@
-// dharnishh/dineshpenjuru/dineshpenjuru-61f31d163d67f0757ff94b209afed6c793e4caa3/src/components/sections/HeroSection.tsx
-// ... (imports and other code remain the same) ...
+import { useRef, useEffect } from "react";
+import { FlipCard, FlipCardRef } from "@/components/FlipCard";
+import { Button } from "@/components/ui/button";
+import dineshProfile from "/lovable-uploads/edbf57cc-59e4-4b54-ae2c-8c41861472ed.png";
+import skillsClipart from "@/assets/skills-clipart.png";
 
 export const HeroSection = () => {
-  // ... (useEffect and other code remain the same) ...
+  const heroAvatarRef = useRef<FlipCardRef>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.target.id === "skills-section" && entry.isIntersecting) {
+          heroAvatarRef.current?.flip(true);
+        } else if (entry.target.id === "about" && entry.isIntersecting) {
+          heroAvatarRef.current?.flip(false);
+        }
+      });
+    }, {
+      threshold: 0.5
+    });
+
+    const skillsSection = document.getElementById("skills-section");
+    const aboutSection = document.getElementById("about");
+    if (skillsSection) observer.observe(skillsSection);
+    if (aboutSection) observer.observe(aboutSection);
+
+    return () => {
+      if (skillsSection) observer.unobserve(skillsSection);
+      if (aboutSection) observer.unobserve(aboutSection);
+    };
+  }, []);
 
   return (
     // Removed min-h-screen to allow content to dictate height more naturally.
