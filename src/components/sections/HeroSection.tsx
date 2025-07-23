@@ -76,6 +76,9 @@ export const HeroSection = () => {
               
               {/* Description alignment adjusted for medium devices and up */}
               <div className="mt-4 max-w-xs sm:max-w-sm md:max-w-md px-4 md:px-0">
+                <p className="text-foreground/90 text-base sm:text-lg font-medium leading-relaxed text-center md:text-left mb-3">
+                  Aspiring to transform complex data into meaningful insights
+                </p>
                 <p className="text-foreground/80 text-lg leading-relaxed text-center md:text-left">
                   I'm a curious and analytical B-Tech student specializing in 
                   Electronics and Communication Engineering.
