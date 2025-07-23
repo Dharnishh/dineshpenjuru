@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -49,7 +49,7 @@ const achievements = [
 
 export const AchievementsSection = () => {
   const plugin = useRef(
-    Autoplay({ delay: 2500, stopOnInteraction: true })
+    Autoplay({ delay: 2000, stopOnInteraction: true })
   );
 
   return (
@@ -72,21 +72,21 @@ export const AchievementsSection = () => {
 
         <div className="max-w-5xl mx-auto">
           <Carousel
-            plugins={[plugin.current]}
+            plugins={[plugin.current] as any}
             className="w-full"
             onMouseEnter={plugin.current.stop}
             onMouseLeave={plugin.current.reset}
           >
             <CarouselContent>
               {achievements.map((achievement) => (
-                <CarouselItem key={achievement.id} className="md:basis-1/2 lg:basis-2/5">
+                <CarouselItem key={achievement.id} className="md:basis-3/4 lg:basis-1/2">
                   <div className="p-2">
                     <Card className="glass-card border-0 overflow-hidden group hover:scale-105 transition-all duration-300">
                       <div className="relative overflow-hidden">
                         <img
                           src={achievement.image}
                           alt={achievement.title}
-                          className="w-full h-32 object-cover transition-transform duration-500 group-hover:scale-110"
+                          className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       </div>
