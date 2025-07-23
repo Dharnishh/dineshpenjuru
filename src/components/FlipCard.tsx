@@ -48,12 +48,13 @@ export const FlipCard = forwardRef<FlipCardRef, FlipCardProps>(
       >
         <div className="flip-card-inner">
           {/* Front */}
-          <div className="flip-card-front glass-card overflow-hidden">
+          <div className="flip-card-front glass-card overflow-hidden relative">
             <img
               src={frontImage}
               alt={alt}
               className="w-full h-full object-cover object-center"
             />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent"></div>
           </div>
 
           {/* Back */}
