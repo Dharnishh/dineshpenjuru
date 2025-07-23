@@ -69,7 +69,7 @@ export const Navbar = ({ darkMode, toggleDarkMode }: NavbarProps) => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-foreground/80 hover:text-primary transition-colors duration-300 font-medium text-sm xl:text-base"
+                  className="text-foreground/80 hover:text-primary transition-colors duration-300 font-medium text-xs xl:text-sm"
                 >
                   {item.name}
                 </a>
@@ -86,7 +86,7 @@ export const Navbar = ({ darkMode, toggleDarkMode }: NavbarProps) => {
               >
                 {darkMode ? <Sun className="h-4 w-4 xl:h-5 xl:w-5" /> : <Moon className="h-4 w-4 xl:h-5 xl:w-5" />}
               </Button>
-              <Button variant="contact" size="sm" asChild className="text-sm xl:text-base px-4 xl:px-8">
+              <Button variant="contact" size="sm" asChild className="text-xs xl:text-sm px-3 xl:px-6">
                 <a href="#contact">Contact</a>
               </Button>
             </div>
