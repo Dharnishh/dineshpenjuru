@@ -64,12 +64,12 @@ export const Navbar = ({ darkMode, toggleDarkMode }: NavbarProps) => {
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-4 xl:space-x-6">
+            <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-foreground/80 hover:text-primary transition-colors duration-300 font-medium text-xs xl:text-sm"
+                  className="text-foreground/80 hover:text-primary transition-colors duration-300 font-medium text-sm xl:text-base"
                 >
                   {item.name}
                 </a>
@@ -86,7 +86,7 @@ export const Navbar = ({ darkMode, toggleDarkMode }: NavbarProps) => {
               >
                 {darkMode ? <Sun className="h-4 w-4 xl:h-5 xl:w-5" /> : <Moon className="h-4 w-4 xl:h-5 xl:w-5" />}
               </Button>
-              <Button variant="contact" size="sm" asChild className="text-xs xl:text-sm px-3 xl:px-6">
+              <Button variant="contact" size="sm" asChild className="text-sm xl:text-base px-4 xl:px-8">
                 <a href="#contact">Contact</a>
               </Button>
             </div>

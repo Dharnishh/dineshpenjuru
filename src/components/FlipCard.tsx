@@ -54,17 +54,17 @@ export const FlipCard = forwardRef<FlipCardRef, FlipCardProps>(
               alt={alt}
               className="w-full h-full object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent"></div>
           </div>
 
           {/* Back */}
           <div className="flip-card-back glass-card overflow-hidden relative">
             <img
               src={backImage}
-              alt={`${alt} - Skills`}
+              alt={`${alt} - Clear`}
               className="w-full h-full object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-l from-primary/20 via-transparent to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-l from-primary/30 to-transparent"></div>
           </div>
         </div>
       </div>
