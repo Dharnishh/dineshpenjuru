@@ -12,30 +12,44 @@ import Autoplay from "embla-carousel-autoplay";
 const achievements = [
   {
     id: 1,
-    title: "Innovation & Robotics Project Expo",
-    description: "Showcased innovative robotics project at the university expo, demonstrating advanced automation and AI integration.",
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop",
-    tags: ["#Innovation", "#Robotics", "#ProjectExpo"]
+    title: "Robotics Expo",
+    description: "Showcased innovative automation project",
+    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&h=600&fit=crop",
+    tags: ["#Innovation", "#Robotics"]
   },
   {
     id: 2,
-    title: "ICIAET Research Presentation",
-    description: "Presented research work at International Conference on Innovative Applications of Engineering & Technology, contributing to academic discourse.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
-    tags: ["#ICIAET", "#Research", "#Teamwork"]
+    title: "ICIAET Conference",
+    description: "Research presentation on engineering tech",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=600&fit=crop",
+    tags: ["#Research", "#Conference"]
   },
   {
     id: 3,
-    title: "Technical Achievement",
-    description: "Successfully completed advanced technical project demonstrating proficiency in data analysis and machine learning applications.",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop",
-    tags: ["#Technology", "#DataScience", "#ML"]
+    title: "ML Project",
+    description: "Advanced data analysis achievement",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&h=600&fit=crop",
+    tags: ["#ML", "#DataScience"]
+  },
+  {
+    id: 4,
+    title: "Web Development",
+    description: "Full-stack application showcase",
+    image: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=1200&h=600&fit=crop",
+    tags: ["#WebDev", "#Fullstack"]
+  },
+  {
+    id: 5,
+    title: "AI Integration",
+    description: "Smart system implementation",
+    image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200&h=600&fit=crop",
+    tags: ["#AI", "#Innovation"]
   }
 ];
 
 export const AchievementsSection = () => {
   const plugin = useRef(
-    Autoplay({ delay: 4000, stopOnInteraction: true })
+    Autoplay({ delay: 2500, stopOnInteraction: true })
   );
 
   return (
@@ -47,12 +61,12 @@ export const AchievementsSection = () => {
             <span className="text-sm font-medium">My Journey</span>
           </div>
           
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            Key <span className="gradient-text">Achievements</span>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
+            <span className="gradient-text">Achievements</span>
           </h2>
           
-          <p className="text-foreground/80 text-lg max-w-2xl mx-auto">
-            Highlighting significant milestones and contributions in my academic and professional journey
+          <p className="text-foreground/80 text-base max-w-xl mx-auto">
+            Key milestones in my journey
           </p>
         </div>
 
@@ -65,19 +79,19 @@ export const AchievementsSection = () => {
           >
             <CarouselContent>
               {achievements.map((achievement) => (
-                <CarouselItem key={achievement.id} className="md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={achievement.id} className="md:basis-1/2 lg:basis-2/5">
                   <div className="p-2">
                     <Card className="glass-card border-0 overflow-hidden group hover:scale-105 transition-all duration-300">
                       <div className="relative overflow-hidden">
                         <img
                           src={achievement.image}
                           alt={achievement.title}
-                          className="w-full h-48 object-cover filter blur-[0.5px] group-hover:blur-none transition-all duration-500"
+                          className="w-full h-32 object-cover transition-transform duration-500 group-hover:scale-110"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       </div>
                       
-                      <CardContent className="p-6">
+                      <CardContent className="p-4">
                         <div className="flex flex-wrap gap-1 mb-3">
                           {achievement.tags.map((tag, index) => (
                             <span
@@ -89,11 +103,11 @@ export const AchievementsSection = () => {
                           ))}
                         </div>
                         
-                        <h3 className="font-semibold text-lg mb-2 gradient-text">
+                        <h3 className="font-semibold text-base mb-1 gradient-text">
                           {achievement.title}
                         </h3>
                         
-                        <p className="text-foreground/70 text-sm leading-relaxed">
+                        <p className="text-foreground/70 text-xs leading-relaxed">
                           {achievement.description}
                         </p>
                       </CardContent>
