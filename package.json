@@ -9,7 +9,7 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"
-    "homepage": "https://dineshpenjuru.github.io",
+    "homepage": "https://dineshpenjuru.netlify.app",
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
