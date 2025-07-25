@@ -1,13 +1,22 @@
 export const ExperienceSection = () => {
   const experiences = [
     {
-      company: "Native Soft Tech",
-      role: "Python Developer Intern",
-      duration: "Jun 2024 - Aug 2024",
+      company: "SmartInternz | Virtual",
+      role: " Data Analyst Power BI",
+      duration: "May 2025 - Jul 2025",
       responsibilities: [
-        "Developed automated data processing scripts using Python and pandas",
-        "Built web scraping tools for market research and data collection",
-        "Collaborated with senior developers on machine learning projects"
+        "Analysed real-world datasets and built interactive dashboards using Power BI.",
+        "Applied data cleaning, transformation, and DAX for actionable business insights.",
+        "Delivered a capstone project simulating real-time business intelligence reporting."
+      ]
+    },
+    {
+      company: "Mastervance | Virtual",
+      role: " User Research Intern",
+      duration: "Feb 2025 - Mar 2025",
+      responsibilities: [
+        "Analysed survey data to identify key competitive benchmarks and industry trends, presenting findings in a comprehensive report.",
+        "Delivered actionable insights and recommendations that influenced a 15% improvement in user satisfaction scores during subsequent product testing."
       ]
     },
     {
@@ -16,7 +25,7 @@ export const ExperienceSection = () => {
       duration: "Mar 2024 - May 2024",
       responsibilities: [
         "Conducted security assessments and vulnerability testing",
-        "Analyzed network traffic and identified potential security threats",
+        "Analysed network traffic and identified potential security threats",
         "Created documentation for security protocols and best practices"
       ]
     }
