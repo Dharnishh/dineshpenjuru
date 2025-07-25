@@ -69,7 +69,7 @@ export const AchievementsSection = () => {
       <div className="text-center mb-8">
         <div className="inline-flex items-center space-x-2 glass-card px-4 py-2 rounded-full mb-6">
           <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
-          <span className="text-sm font-medium text-white">My Journey</span>
+          <span className="text-sm font-medium text-primary">My Journey</span>
         </div>
         
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
