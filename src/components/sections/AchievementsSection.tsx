@@ -61,7 +61,7 @@ const achievements = [
 
 export const AchievementsSection = () => {
   const plugin = useRef(
-    Autoplay({ delay: 4000, stopOnInteraction: true })
+    Autoplay({ delay: 3000, stopOnInteraction: false })
   );
 
   return (
@@ -81,8 +81,6 @@ export const AchievementsSection = () => {
         <Carousel
           plugins={[plugin.current] as any}
           className="w-full"
-          onMouseEnter={plugin.current.stop}
-          onMouseLeave={plugin.current.reset}
         >
           <CarouselContent>
             {achievements.map((achievement) => (
