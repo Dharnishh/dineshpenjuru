@@ -5,10 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Linkedin, Github, Mail } from "lucide-react";
 import dineshProfile from "/lovable-uploads/42af4fe2-04ee-44a9-b7ea-c2aed20956f1.png";
 import dineshBlurred from "/lovable-uploads/42af4fe2-04ee-44a9-b7ea-c2aed20956f1.png";
-
 export const AboutSection = () => {
   const aboutAvatarRef = useRef<FlipCardRef>(null);
-
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -21,17 +19,13 @@ export const AboutSection = () => {
     }, {
       threshold: 0.5
     });
-
     const aboutSection = document.getElementById("about");
     if (aboutSection) observer.observe(aboutSection);
-
     return () => {
       if (aboutSection) observer.unobserve(aboutSection);
     };
   }, []);
-
-  return (
-    <section id="about" className="section-padding">
+  return <section id="about" className="section-padding">
       <div className="container-width">
         {/* Changed from 'lg:grid-cols-2' to 'md:grid-cols-2' */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
@@ -96,11 +90,7 @@ export const AboutSection = () => {
                 </Button>
               </div>
 
-              <div className="flex justify-center md:justify-start">
-                <Button variant="outline" size="lg">
-                My Story
-                </Button>
-              </div>
+              
             </div>
           </div>
 
@@ -111,6 +101,5 @@ export const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
