@@ -19,7 +19,7 @@ const achievements = [
       "Praised for innovation, execution, and real-world impact.",
       "Stood out among top teams from across India."
     ],
-    image: "/lovable-uploads/8c988a89-661e-42d2-8752-50f9791ea9d2.png"
+    image: "/lovable-uploads/204b3396-f7f0-4ab1-bef0-ddcea8bbdd60.png"
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ const achievements = [
       "Gained appreciation from jury for technical innovation.",
       "Among top performers in a highly competitive event."
     ],
-    image: "/lovable-uploads/8cfb313b-dc1a-4a83-ba80-c0138306e261.png"
+    image: "/lovable-uploads/ae9389c8-a64e-4962-bf53-1bce8cb4461f.png"
   },
   {
     id: 3,
@@ -43,7 +43,7 @@ const achievements = [
       "Received certificates from the expert jury panel during the event.",
       "The paper was successfully published in a recognized journal, marking our academic contribution."
     ],
-    image: "/lovable-uploads/205c0c9f-354d-4d0d-bf65-6716efb705ad.png"
+    image: "/lovable-uploads/f31a7fd6-b7c6-4f75-b670-aa19149b1ab1.png"
   },
   {
     id: 4,
@@ -55,7 +55,7 @@ const achievements = [
       "Won for simplicity, scalability, and innovation.",
       "Impressed judges in a competitive engineering event."
     ],
-    image: "/lovable-uploads/5d34dce2-e50c-4f44-89fa-b5e2c980650d.png"
+    image: "/lovable-uploads/148a213d-9cb5-4655-9289-d0ddfb9db181.png"
   }
 ];
 
