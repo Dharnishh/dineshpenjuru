@@ -47,7 +47,7 @@ const achievements = [
   },
   {
     id: 4,
-    title: "CBIT-Patel Project Expo",
+    title: "CBIT-Pdtr Project Expo",
     points: [
       "Achieved 3rd Prize at CBIT-Patel State-level Expo.",
       "Demonstrated a compact robotic monitoring solution.",
