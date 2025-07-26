@@ -3,10 +3,8 @@ import { FlipCard, FlipCardRef } from "@/components/FlipCard";
 import { Button } from "@/components/ui/button";
 import dineshProfile from "/lovable-uploads/edbf57cc-59e4-4b54-ae2c-8c41861472ed.png";
 import skillsClipart from "@/assets/skills-clipart.png";
-
 export const HeroSection = () => {
   const heroAvatarRef = useRef<FlipCardRef>(null);
-
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -19,18 +17,15 @@ export const HeroSection = () => {
     }, {
       threshold: 0.5
     });
-
     const skillsSection = document.getElementById("skills-section");
     const aboutSection = document.getElementById("about");
     if (skillsSection) observer.observe(skillsSection);
     if (aboutSection) observer.observe(aboutSection);
-
     return () => {
       if (skillsSection) observer.unobserve(skillsSection);
       if (aboutSection) observer.unobserve(aboutSection);
     };
   }, []);
-
   return (
     // Removed min-h-screen to allow content to dictate height more naturally.
     // Adjusted top padding to be less aggressive, especially on smaller screens.
@@ -43,8 +38,8 @@ export const HeroSection = () => {
             {/* Left Column - "DINESH" - Moved above flip card on mobile */}
             <div className="flex flex-col items-center md:items-end justify-center space-y-3 sm:space-y-4 md:space-y-2 order-1 md:order-1">
               {/* Adjusted text alignment to be right-aligned on medium devices and up */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-wider gradient-text text-center md:text-right">DINESH</h1>
-              <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl tracking-widest uppercase text-foreground/90 font-medium text-center md:text-right">PENJURU</h2>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-wider gradient-text text-center md:text-right">PENJURU</h1>
+              <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl tracking-widest uppercase text-foreground/90 font-medium text-center md:text-right">DINESH</h2>
             </div>
 
             {/* Center Column - Profile Card */}
@@ -52,14 +47,9 @@ export const HeroSection = () => {
             <div className="flex flex-col items-center space-y-6 sm:space-y-8 md:space-y-6 order-2 md:order-2">
               {/* Auto-Flip Card Avatar */}
               <div className="relative">
-                <FlipCard 
-                  ref={heroAvatarRef} 
-                  frontImage={dineshProfile} 
-                  backImage={skillsClipart} 
-                  alt="P.V. Dinesh" 
-                  // Kept responsive sizing for better fit across different smaller viewports
-                  className="w-48 h-60 sm:w-56 sm:h-72 md:w-64 md:h-80 lg:w-72 lg:h-90 xl:w-80 xl:h-96" 
-                />
+                <FlipCard ref={heroAvatarRef} frontImage={dineshProfile} backImage={skillsClipart} alt="P.V. Dinesh"
+                // Kept responsive sizing for better fit across different smaller viewports
+                className="w-48 h-60 sm:w-56 sm:h-72 md:w-64 md:h-80 lg:w-72 lg:h-90 xl:w-80 xl:h-96" />
                 
                 {/* Waving Hand Button - Left side, bottom of flipcard */}
                 <Button variant="glass" size="icon" className="absolute -left-4 sm:-left-6 lg:-left-8 bottom-2 sm:bottom-4 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full text-lg sm:text-xl lg:text-2xl hover-glow animate-float bg-primary/20">
