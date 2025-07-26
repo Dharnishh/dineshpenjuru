@@ -39,7 +39,7 @@ export const HeroSection = () => {
             <div className="flex flex-col items-center md:items-end justify-center space-y-3 sm:space-y-4 md:space-y-2 order-1 md:order-1">
               {/* Adjusted text alignment to be right-aligned on medium devices and up */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-wider gradient-text text-center md:text-right">PENJURU</h1>
-              <h2 className="text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl tracking-widest uppercase text-foreground/90 font-medium text-center md:text-right">DINESH</h2>
+              <h2 className="text-base sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl tracking-widest uppercase text-foreground/90 font-medium text-center md:text-right">DINESH</h2>
             </div>
 
             {/* Center Column - Profile Card */}
