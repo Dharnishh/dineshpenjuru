@@ -52,7 +52,7 @@ export const Navbar = ({ darkMode, toggleDarkMode }: NavbarProps) => {
               <img
                 src={dineshProfile}
                 alt="P.V. Dinesh"
-                className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover border-2 border-primary/20"
+                className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover object-center border-2 border-primary/20"
               />
             </div>
 
