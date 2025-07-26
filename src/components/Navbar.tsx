@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Sun, Moon } from "lucide-react";
-import dineshProfile from "/lovable-uploads/4bcd1da2-4e32-4a6e-b63d-d7312105d7f2.png";
+import dineshProfile from "/lovable-uploads/de0d7241-7455-4ed7-aceb-a1c99d3c6a7b.png";
 
 interface NavbarProps {
   darkMode: boolean;
