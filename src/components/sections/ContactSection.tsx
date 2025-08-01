@@ -25,9 +25,9 @@ export const ContactSection = () => {
 
     try {
       // EmailJS configuration
-      const serviceId = 'service_portfolio'; // You'll need to replace this
-      const templateId = 'template_contact'; // You'll need to replace this
-      const publicKey = 'YOUR_PUBLIC_KEY'; // You'll need to replace this
+      const serviceId = 'service_g1y55gi'; // You'll need to replace this
+      const templateId = 'template_xdckt39'; // You'll need to replace this
+      const publicKey = 'zdnqQPkjQQfK5H37h'; // You'll need to replace this
 
       const templateParams = {
         from_name: formData.name,
