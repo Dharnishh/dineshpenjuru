@@ -8,14 +8,14 @@ export const ProjectsSection = () => {
       description:
         "A clean and powerful BI dashboard showcasing regional sales, KPIs, trends, and performance insights. Built for business impact and professional reporting.",
       technologies: ["Power BI", "Power Query", "DAX", "Excel"],
-      githubLink: "#", // No actual link, so using placeholder
+      githubLink: "https://github.com/Dharnishh/Global-Energy-Trends-Analysis", 
     },
     {
       title: "🏏 IPL Data Analysis Project",
       description:
         "A data-driven deep dive into IPL history – revealing winning patterns, player performance, and game-changing stats. Perfect for sports fans and analytics lovers!",
       technologies: ["Python", "Excel", "Pivot Tables", "Vlookup"],
-      githubLink: "#",
+      githubLink: "https://github.com/Dharnishh/ipl_data_analysis",
     },
     {
       title: "🧾 Automated Certificate Generator",
@@ -25,11 +25,11 @@ export const ProjectsSection = () => {
       githubLink: "#",
     },
     {
-      title: "🤖 Home Virtual Assistant",
+      title: "🤖 Virtual Assistant",
       description:
         "A smart robot built using Python and hardware integration to perform real-time tasks via voice commands. From answering queries to moving across rooms, JarvisBot is an AI-powered mini robot designed for basic home assistance and interactive automation.",
       technologies: ["Python", "AI/ML", "SpeechRecognition", "ESP/Arduino", "pyttsx3"],
-      githubLink: "#",
+      githubLink: "https://github.com/Dharnishh/Virtual-Assistant",
     },
   ];
 
