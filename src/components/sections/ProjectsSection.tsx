@@ -22,7 +22,7 @@ export const ProjectsSection = () => {
       description:
         "A powerful automation tool that takes Google Form responses and instantly generates personalized certificates – streamlining event management like never before.",
       technologies: ["Python", "Google Sheets API", "Google Slides API", "Gmail API"],
-      githubLink: "#",
+      githubLink: "https://github.com/Dharnishh/Certificate-Auto-Generator",
     },
     {
       title: "🤖 Virtual Assistant",
