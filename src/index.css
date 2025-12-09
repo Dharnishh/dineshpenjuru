@@ -1,0 +1,287 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Portfolio Design System - Clean White Theme (Light Mode) */
+
+/* dharnishh/dineshpenjuru/dineshpenjuru-61f31d163d67f0757ff94b209afed6c793e4caa3/src/index.css */
+
+/* ... (previous code) ... */
+
+@layer base {
+  :root {
+    /* ... (previous light mode colors) ... */
+    --glass: 255 255 255 / 0.9; /* Slightly more opaque for light mode glass */
+    /* ... (rest of light mode colors) ... */
+  }
+
+  .dark {
+    /* ... (previous dark mode colors) ... */
+    --glass: 240 10% 10.9% / 0.8; /* More opaque for dark mode glass */
+    /* ... (rest of dark mode colors) ... */
+  }
+}
+
+@layer components {
+  /* Glass Card Effect */
+  .glass-card {
+    /* Changed from bg-white/10 to use --glass variable directly for consistency */
+    @apply bg-[hsl(var(--glass))] backdrop-blur-md border border-white/20 rounded-2xl;
+    box-shadow: var(--shadow-glass);
+  }
+  
+  /* ... (rest of components) ... */
+}
+
+@layer base {
+  :root {
+    /* Background & Surface Colors */
+    --background: 0 0% 100%; /* Pure white background */
+    --foreground: 0 0% 0%; /* Black text */
+    
+    /* Card & Surface Elements */
+    --card: 0 0% 100%; /* Pure white cards */
+    --card-foreground: 0 0% 0%;
+    --glass: 255 255 255 / 0.9; /* Clean white glass effect */
+    
+    /* Brand Purple Colors for accents */
+    --primary: 259 94% 51%; /* Vibrant purple */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 268 83% 82%; /* Lighter purple for glows */
+    
+    /* Secondary & Accent */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 0%;
+    --accent: 259 94% 51%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Semantic Colors */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 259 94% 51%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(259 94% 51%), hsl(268 83% 82%));
+    --gradient-background: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 98%));
+    --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9));
+    
+    /* Shadows & Effects */
+    --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    --shadow-glow: 0 0 40px hsl(259 94% 51% / 0.3);
+    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.1);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    
+    --radius: 1rem;
+  }
+
+  .dark {
+    /* Define actual dark mode colors here for contrast */
+    --background: 240 10% 3.9%; /* Darker background */
+    --foreground: 0 0% 98%; /* Light text */
+    
+    --card: 240 10% 10.9%; /* Darker cards */
+    --card-foreground: 0 0% 98%;
+    --glass: 240 10% 10.9% / 0.6; /* Darker glass effect */
+    
+    --primary: 259 94% 65%; /* Slightly brighter purple for dark mode */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 268 83% 70%; /* Adjusted glow for dark mode */
+    
+    --secondary: 240 10% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --accent: 259 94% 65%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Semantic Colors */
+    --muted: 240 10% 20%;
+    --muted-foreground: 0 0% 60%;
+    --border: 240 10% 25%;
+    --input: 240 10% 25%;
+    --ring: 259 94% 65%;
+
+    /* Gradients */
+    --gradient-background: linear-gradient(135deg, hsl(240 10% 3.9%), hsl(240 10% 6%));
+    --gradient-card: linear-gradient(145deg, hsl(240 10% 10.9% / 0.8), hsl(240 10% 15% / 0.7));
+
+    /* Shadows & Effects */
+    --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    --shadow-glow: 0 0 40px hsl(259 94% 65% / 0.3);
+    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: var(--gradient-background);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsl(var(--primary-glow) / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(var(--primary) / 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+  }
+}
+
+@layer components {
+  /* Glass Card Effect */
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl;
+    box-shadow: var(--shadow-glass);
+  }
+  
+  /* Custom Cursor */
+  .custom-cursor {
+    @apply fixed pointer-events-none z-50 w-6 h-6 rounded-full border-2 border-primary mix-blend-difference;
+    transition: var(--transition-smooth);
+  }
+  
+  /* Flip Card Styles */
+  .flip-card {
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    @apply relative w-full h-full transition-transform duration-700;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    @apply absolute w-full h-full rounded-2xl overflow-hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+  
+  /* Gradient Text */
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Hover Glow Effect */
+  .hover-glow {
+    transition: var(--transition-smooth);
+  }
+  
+  .hover-glow:hover {
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+  }
+  
+  /* Section Spacing */
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20;
+  }
+  
+  /* Container Max Width */
+  .container-width {
+    @apply max-w-7xl mx-auto px-4 sm:px-0;
+  }
+  
+  /* Responsive Typography */
+  @screen sm {
+    .section-padding {
+      @apply py-16;
+    }
+  }
+  
+  @screen lg {
+    .section-padding {
+      @apply py-20;
+    }
+  }
+  
+  /* Mobile-first responsive utilities */
+  .text-responsive-xs {
+    @apply text-xs sm:text-sm;
+  }
+  
+  .text-responsive-sm {
+    @apply text-sm sm:text-base;
+  }
+  
+  .text-responsive-base {
+    @apply text-base sm:text-lg;
+  }
+  
+  .text-responsive-lg {
+    @apply text-lg sm:text-xl lg:text-2xl;
+  }
+  
+  .text-responsive-xl {
+    @apply text-xl sm:text-2xl lg:text-3xl;
+  }
+  
+  .text-responsive-2xl {
+    @apply text-2xl sm:text-3xl lg:text-4xl;
+  }
+  
+  .text-responsive-3xl {
+    @apply text-3xl sm:text-4xl lg:text-5xl;
+  }
+  
+  /* Responsive spacing utilities */
+  .space-responsive-sm {
+    @apply space-y-4 sm:space-y-6;
+  }
+  
+  .space-responsive-md {
+    @apply space-y-6 sm:space-y-8;
+  }
+  
+  .space-responsive-lg {
+    @apply space-y-8 sm:space-y-12;
+  }
+  
+  /* Mobile touch targets */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  /* Responsive grid gaps */
+  .gap-responsive-sm {
+    @apply gap-4 sm:gap-6;
+  }
+  
+  .gap-responsive-md {
+    @apply gap-6 sm:gap-8;
+  }
+  
+  .gap-responsive-lg {
+    @apply gap-8 sm:gap-12 lg:gap-16;
+  }
+}
