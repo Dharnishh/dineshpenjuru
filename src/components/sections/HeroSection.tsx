@@ -61,8 +61,8 @@ export const HeroSection = () => {
             {/* Right Column - "DATA ANALYST" */}
             <div className="flex flex-col items-center md:items-start justify-center space-y-3 sm:space-y-4 md:space-y-2 order-3 md:order-3">
               {/* Adjusted text alignment to be left-aligned on medium devices and up */}
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-wider gradient-text text-center md:text-left">DATA</h2>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-wider gradient-text text-center md:text-left">ANALYST</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-wider gradient-text text-center md:text-left">Electronics & Communication Engineer</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-wider gradient-text text-center md:text-left">IoT • Embedded Systems • Robotics</h2>
               
               {/* Description alignment adjusted for medium devices and up */}
               <div className="mt-4 max-w-xs sm:max-w-sm md:max-w-md px-4 md:px-0">
